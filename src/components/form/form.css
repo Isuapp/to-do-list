@@ -1,0 +1,29 @@
+form{
+    width:75%;
+    display: flex;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+form >button{
+    max-width: 8rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 3px solid  steelblue;
+    background-color: transparent;
+    color:steelblue
+}
+form > input,
+form >button{
+    flex-grow: 1;
+}
+form > input {
+    padding:1rem 2rem .5rem 1rem;
+    border:none;
+    border-bottom: 3px solid  steelblue;
+    color:rgb(39, 96, 143)
+}
+form > input:focus{
+    outline:none;
+}
