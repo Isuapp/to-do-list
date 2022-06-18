@@ -1,19 +1,18 @@
-div.toDoes{
-    margin:auto;
+div.todoesinprogress{
     background-color: rgb(185, 208, 226);
     padding:.8rem;
     border-radius: 5px;
-    min-height: 40em; 
+    min-height: 40em;
     margin:1rem;
     flex-grow: 1;
     color:whitesmoke;
 }
 
-div.toDoes>div{
+div.todoesinprogress>div{
     background-color: steelblue;
     border-radius: 5px 5px 0px 0px ;
 }
 
-div.toDoes > div >h2{
+div.todoesinprogress > div >h2{
     padding:.8rem 0 .8rem .8rem;
 }

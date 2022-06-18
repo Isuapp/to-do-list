@@ -12,3 +12,11 @@ button{
   padding:.5rem;
   cursor: pointer;
 }
+
+.board{
+  display: flex;
+  flex-wrap: wrap;
+  width:90%;
+  margin:auto;
+  justify-content:center;
+}
