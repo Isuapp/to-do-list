@@ -8,26 +8,28 @@ import ToDoesInProgress from './components/toDoesInProgress/ToDoesInProgress';
 
 function App() {
 
-  const [toDoes, setToDoes] = useState([]);
 
+  const [toDoes, setToDoes] = useState([]);
   const [toDoesInProgress, setToDoesInProgress] = useState([])
   
 
   // Remember the handle submit on the form component.
   const add = (inputValue) =>{
-
     // We create the new to-do
     const newToDo = {
       id:nanoid(),
       name:inputValue,
-      toDo:true,
-      InProgress:false,
-      complete:false,
     }
+  
+    const [sameName] = toDoes.filter(toDo=>toDo.name===newToDo.name);
+
+    if(sameName) console.log('Theres a to-do with the same name!')
 
     // We upodate the list of to-does
-    setToDoes([...toDoes, newToDo])
+    if(!sameName)  setToDoes([...toDoes, newToDo]);
   }
+
+
   const start = (id) =>{
    
       // Identify the toDo with the same id as the target
@@ -36,9 +38,12 @@ function App() {
       //Identificamos todos los toDoes con id difente
       const filteredToDoes = toDoes.filter(toDo=>toDo.id!==id);
       
+      const [sameName] = toDoesInProgress.filter(toDo=>toDo.name===newInProgress.name);
+
+      if(sameName) console.log('Theres a to-do with the same name!')
 
       // Update the progress column with the new to-do
-      setToDoesInProgress([...toDoesInProgress, newInProgress]);
+      if(!sameName) setToDoesInProgress([...toDoesInProgress, newInProgress]);
 
       // We update the to-do column after the update of progress column
       setToDoes(filteredToDoes)
